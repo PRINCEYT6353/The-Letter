@@ -1,36 +1,51 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="index.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <title>FOR YOU MY MOON 💗</title>
-    </head>
-    <body>
-        <div class="envelope-wrapper">
-            <div id="envelope" class="close">
-                <div class="front flap"></div>
-                <div class="front pocket"></div>
-                <div class="letter">
-                    <p class="words line1">Assalamualaikum 😊,</p>
-                    <p class="words line2">If Loving You Is a Crime
-                        I Never Want To Be Innocent 😁</p>
-                    <p class="words line3"> I Love You 💗,</p>
-                    <p class="words line4">Mehroz🌙</p>
-                </div>
-                <div class="hearts">
-                    <div class="heart a1"></div>
-                    <div class="heart a2"></div>
-                    <div class="heart a3"></div>
-                </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Mahi ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Step 1: Start Button -->
+        <div id="startScreen" class="screen active">
+            <h1>Hello Mahi 💖</h1>
+            <p>You’re about to see something special!</p>
+            <button class="btn" onclick="startQuestions()">Click for a Surprise ❤️</button>
+        </div>
+
+        <!-- Step 2: Cute Questions -->
+        <div id="questionScreen" class="screen">
+            <h2 id="questionText">Do you like surprises, Mahi? 😊</h2>
+            <div class="options">
+                <button class="btn" onclick="nextQuestion(true)">Yes 😍</button>
+                <button class="btn" onclick="nextQuestion(false)">No 😅</button>
             </div>
         </div>
-        <div class="reset">
-            <button id="open">Open</button>
-            <button id="reset">Reset</button>
+
+        <!-- Step 3: Puzzle -->
+        <div id="puzzleScreen" class="screen">
+            <h2>Mahi, Unscramble this word: <strong id="scrambledWord"></strong></h2>
+            <input type="text" id="puzzleInput" placeholder="Type your answer">
+            <button class="btn" onclick="checkPuzzle()">Submit</button>
+            <p id="puzzleMessage"></p>
         </div>
-        <h1 class="valentine">💗</h1>
-        <script src="index.js"></script>
-    </body>
+
+        <!-- Step 4: Love Letter -->
+        <div id="letterScreen" class="screen">
+            <h1 class="title">For You, Mahi ❤️</h1>
+            <div class="letter">
+                <p id="letterText"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Floating Hearts -->
+    <div class="hearts" id="hearts"></div>
+
+    <script src="script.js"></script>
+</body>
 </html>
